@@ -27,7 +27,7 @@
     Dob
   </dt>
   <dd>
-    <%= @director_info.dob.strftime("%B %e, %Y") %>
+    <%= @director_info.dob %>
   </dd>
 
   <dt>
@@ -48,16 +48,15 @@
     Created at
   </dt>
   <dd>
-    <%=@director_info.created_at%>
-    almost 6 years ago
+    <%=time_ago_in_words(@director_info.created_at)%> ago
+    
   </dd>
 
   <dt>
     Updated at
   </dt>
   <dd>
-    <%=@director_info.updated_at%>
-    almost 6 years ago
+    <%=time_ago_in_words(@director_info.updated_at)%> ago
   </dd>
 </dl>
 
@@ -86,3 +85,47 @@
     <th>
       Director
     </th>
+
+    <th>
+    </th>
+  </tr>
+
+<% @filmography.each do |movie| %>
+
+<tr>
+    <td>
+      <%=movie.id%>
+    </td>
+
+    <td>
+      <img src="https://robohash.org/<%=movie.id%>" style="width:250px;">
+    </td>
+
+    <td>
+      <%=movie.title%>
+    </td>
+
+    <td>
+      <%=movie.year%>
+    </td>
+
+    <td>
+      <%=movie.director_id%>
+    </td>
+
+    <td>
+      <a href="/movies/<%=movie.id%>">
+        Show details
+      </a>
+    </td>
+  </tr>
+
+<% end %>
+
+</table>
+
+
+
+
+
+
