@@ -1,0 +1,113 @@
+<h1>
+  Actor # <%=@actor_info.id%> details
+</h1>
+
+<a href="/actors" class="btn btn-block btn-outline-secondary">
+  Go back
+</a>
+
+&nbsp;|&nbsp;
+
+<a href="/delete_actor/1 %>" class="btn btn-block btn-outline-secondary">
+  Delete actor
+  <small>(Building this link is not required. It's an optional stretch goal; but, you have the tools if you want to give it a try.)</small>
+</a>
+
+<hr>
+
+<dl>
+  <dt>
+    Name
+  </dt>
+  <dd>
+    
+  </dd>
+    <%=@actor_info.name%>
+  <dt>
+    Dob
+  </dt>
+  <dd>
+    <%=@actor_info.dob%>
+  </dd>
+
+  <dt>
+    Bio
+  </dt>
+  <dd>
+    <%=@actor_info.bio%>
+  </dd>
+
+  <dt>
+    Image
+  </dt>
+  <dd>
+    <img src="https://robohash.org/<%=@actor_info.id%>?set=set3" style="width:250px;">
+  </dd>
+
+  <dt>
+    Created at
+  </dt>
+  <dd>
+    almost 6 years ago
+  </dd>
+
+  <dt>
+    Updated at
+  </dt>
+  <dd>
+    almost 6 years ago
+  </dd>
+</dl>
+
+<hr>
+
+<h2>Filmography</h2>
+
+<table border="1">
+  <tr>
+    <th>
+      Title
+    </th>
+
+    <th>
+      Year
+    </th>
+
+    <th>
+      Director
+    </th>
+
+    <th>
+      Character name
+    </th>
+
+    <th>
+    </th>
+  </tr>
+
+    <tr>
+      <td>
+        The Shawshank Redemption
+      </td>
+
+      <td>
+        1994
+      </td>
+
+      <td>
+
+
+          Frank Darabont
+      </td>
+
+      <td>
+        Andy Dufresne
+      </td>
+
+      <td>
+        <a href="/movies/1">
+          Show details
+        </a>
+      </td>
+    </tr>
+</table>
